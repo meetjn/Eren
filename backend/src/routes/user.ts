@@ -1,7 +1,8 @@
+import { Hono } from "hono";
 import { PrismaClient } from '@prisma/client/edge'
 import { withAccelerate } from '@prisma/extension-accelerate'
 import { sign } from 'hono/jwt'
-import { Hono } from "hono";
+import { signupInput } from "@meetjain/eren-commons";
 
 export const userRouter = new Hono<{
     Bindings: {                    // Define the environment variables
@@ -14,6 +15,13 @@ export const userRouter = new Hono<{
 // Define routes
 userRouter.post('/signup', async (c) => {
 	const body = await c.req.json();
+	const {success} = signupInput.safeParse(body);  // validate the input (frontend will need this to validate the input before sending it to backend)
+	if (!success){
+		c.status(411);
+		return c.json({
+			message: "Invalid input. Please try again."
+		})
+	}
 	const prisma = new PrismaClient({
 	datasourceUrl: c.env.DATABASE_URL,
 }).$extends(withAccelerate())  // Initialize Prisma Client with the Accelerate extension. mandatory thing. 
@@ -39,6 +47,13 @@ userRouter.post('/signup', async (c) => {
 
 userRouter.post('/signin', async (c) => {
 	const body = await c.req.json();
+	const {success} = signupInput.safeParse(body);  // validate the input (frontend will need this to validate the input before sending it to backend)
+	if (!success){
+		c.status(411);
+		return c.json({
+			message: "Invalid input. Please try again."
+		})
+	}
 	const prisma = new PrismaClient({
 	datasourceUrl: c.env.DATABASE_URL,
 }).$extends(withAccelerate())  // Initialize Prisma Client with the Accelerate extension. mandatory thing. 
