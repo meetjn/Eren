@@ -1,6 +1,8 @@
 import { Hono } from 'hono';
 import { userRouter } from './routes/user';
 import { blogRouter } from './routes/blog';
+import { cors } from 'hono/cors'
+
 
 
 const app = new Hono<{
@@ -10,6 +12,7 @@ const app = new Hono<{
 	}
 }>();
 
+app.use('/*', cors());  // Enable CORS for all routes under /api cors middleware frontend will be able to talk with the backend
 app.route("/api/v1/user", userRouter);
 app.route("/api/v1/blog", blogRouter);
 

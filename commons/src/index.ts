@@ -23,7 +23,8 @@ export const updateBlogInput = z.object({
     id: z.number()
 })
 
+export type SignupInput = z.infer<typeof signupInput>;
+export type SigninInput = z.infer<typeof signinInput>; 
 export type CreateBlogInput = z.infer<typeof createBlogInput>; // infer is a function that will take the type of the zod schema, frontend will need
 export type UpdateBlogInput = z.infer<typeof updateBlogInput>; 
-export type SigninInput = z.infer<typeof signinInput>; 
-export type SignupInput = z.infer<typeof signupInput>;
+
