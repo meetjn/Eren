@@ -19,7 +19,7 @@ userRouter.post('/signup', async (c) => {
 	if (!success){
 		c.status(411);
 		return c.json({
-			message: "Invalid input. Please try again."
+			message: "Inputs not correct."
 		})
 	}
 	const prisma = new PrismaClient({
@@ -41,7 +41,7 @@ userRouter.post('/signup', async (c) => {
 		return c.text(jwt)
 	} catch (e){
 		c.status(411)
-		return c.text('Invalid input. Please try again.')
+		return c.text("Invalid")
 	}
 })
 
@@ -51,7 +51,7 @@ userRouter.post('/signin', async (c) => {
 	if (!success){
 		c.status(411);
 		return c.json({
-			message: "Invalid input. Please try again."
+			message: "Inputs not correct for signin."
 		})
 	}
 	const prisma = new PrismaClient({
@@ -78,6 +78,6 @@ userRouter.post('/signin', async (c) => {
 		return c.text(jwt)
 	} catch (e){
 		c.status(411)
-		return c.text('Invalid input. Please try again.')
+		return c.text('Invalid input...Please try again.')
 	}
 })
