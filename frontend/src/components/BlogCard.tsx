@@ -5,7 +5,7 @@ interface BlogCardProps {
     publishedDate: string;
 }
 
-export const BlogCard = () => ({
+export const BlogCard = ({
     authorName,
     title,
     content,
