@@ -2,9 +2,9 @@ name = "eren"
 compatibility_date = "2023-12-01"
 
 [vars]
-DATABASE_URL = "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMTYzOWQxNjQtODI0MS00MzI2LWIxNWItOTAzMmJmNDA5OGE3IiwidGVuYW50X2lkIjoiZDZmMGMxNTMzZTg2MGM3ZDFjY2EyMDdhMTJjNzBjNThiNTUyYWMxODU1NjRjODg0ZTAwZTFjOTg3NzRiMDdiYyIsImludGVybmFsX3NlY3JldCI6ImQ1YWE5MjZkLTE5ZWYtNGI1MS05ZTU1LTE0YjU4OGRmZjE3YSJ9.bldNTTHAnSkZD0aVzMDaPorwgxnWIwrAscmzWcUthnY"
+DATABASE_URL = ""
 
-JWT_SECRET = "meet1234"
+JWT_SECRET = ""
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
