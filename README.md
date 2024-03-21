@@ -1,5 +1,10 @@
 Blogging app which lets users publish blogs. This project is completely based on enhancing my learning experience in web development, there are a lot of things to implement in this project.
 
+Learnings: 
+Utilized Hono framework and deployed Backend on serverless Cloudflare workers.
+Used Prisma ORM to access the database, and implemented connection pool to manage database connection. 
+
+
 Technologies used: 
 Frontend: ReactJs
 Backend: Cloudflare workers
