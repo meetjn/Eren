@@ -13,7 +13,7 @@ First, clone the repository:
 git clone https://github.com/meetjn/Eren.git
 
 Second step: 
-Run the command: npm install.
+Run the command: npm install
 
 followed by: npm run dev. 
 
