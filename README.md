@@ -6,11 +6,17 @@ Used Prisma ORM to access the database, and implemented connection pool to manag
 
 
 Technologies used: 
+
 Frontend: ReactJs
+
 Backend: Cloudflare workers
+
 Language: TypeScript
+
 Database: PostgreSQL
+
 Framework: Express.js 
+
 
 Project setting up-
 
