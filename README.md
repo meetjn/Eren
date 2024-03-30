@@ -15,11 +15,16 @@ Framework: Express.js
 Project setting up-
 
 First, clone the repository:
-git clone https://github.com/meetjn/Eren.git
+
+    git clone https://github.com/meetjn/Eren.git
 
 Second step: 
-Run the command: npm install
+Run the command: 
 
-followed by: npm run dev. 
+    npm install
+
+followed by: 
+
+    npm run dev. 
 
 then head over to localhost:5173/signup to get started with the web app. 
